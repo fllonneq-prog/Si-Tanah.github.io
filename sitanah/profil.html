@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiTanah Ngada - Sistem Informasi Pertanahan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span>📞 (0385) 210 1234</span>
+                <span>✉️ pertanahan@pupr.ngadakab.go.id</span>
+            </div>
+            <!--div class="top-social">
+                <span>📘</span> <span>📸</span> <span>📺</span>
+            </div-->
+            <div class="top-social">
+                <!-- Facebook Icon -->
+                <a href="#" aria-label="Facebook">
+                    <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"></path>
+                    </svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="#" aria-label="Instagram">
+                    <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.893 3.893 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.298c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+                    </svg>
+                </a>
+                <!-- YouTube Icon -->
+                <a href="#" aria-label="YouTube">
+                    <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05 1.55-.174 1.902-.223 2.084a2.01 2.01 0 0 1-1.415 1.42c-1.117.299-5.273.33-6.1l.034c-.815-.003-4.977-.033-6.1-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.882-.22-1.402l-.013-.104-.018-.233-.007-.104c-.065-.914-.073-1.77-.074-1.957v-.075c.001-.194.01-1.108.082-2.06l.004-.105.01-.104c.05-1.55.174-1.902.223-2.084a2.01 2.01 0 0 1 1.415-1.42c1.117-.299 5.273-.33 6.1-.33h.089zm-1.67 3.375v4.25l4.015-2.125-4.015-2.125z"/>
+                    </svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <!--div class="logo-area">
+                <div class="logo-placeholder">🟢</div>
+                <div>
+                    <h1 class="logo-title">SiTanah Ngada</h1>
+                    <p class="logo-subtitle">Sistem Informasi Pertanahan Kabupaten Ngada</p>
+                </div>
+            </div-->
+
+            <div class="logo-area">
+                <div class="logo-images">
+                    <!-- Logo Kabupaten Ngada -->
+                    <img src="logo/Ngada.png" alt="Logo Kabupaten Ngada" class="web-logo">
+                    <!-- Logo PUPR -->
+                    <img src="logo/LogoPU.jpg" alt="Logo PUPR" class="web-logo">
+                </div>
+                <div>
+                    <h1 class="logo-title">SiTanah Ngada</h1>
+                    <p class="logo-subtitle">Sistem Informasi Pertanahan Kabupaten Ngada</p>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="profil.html" class="active">Profil</a>
+                <a href="persyaratan.html">Persyaratan</a>
+                <a href="alur.html">Alur Pendaftaran</a>
+                <a href="dasar-hukum.html">Dasar Hukum</a>
+                <!--a href="#">FAQ</a>
+                <a href="#">Kontak</a-->
+                <a href="#" class="btn-contact-nav">DOWNLOAD</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB BANNER -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Profil Kantor & Struktur Organisasi</h2>
+            <p><a href="index.html">Beranda</a> &raquo; Profil</p>
+        </div>
+    </section>
+
+    <!-- PROFIL TEXT SECTION -->
+    <section class="profil-section">
+        <div class="container">
+            <div class="profil-grid-text">
+                <div class="profil-tentang">
+                    <h3>Tentang Dinas PUPR Kabupaten Ngada</h3>
+                    <p>Dinas Pekerjaan Umum dan Penataan Ruang (PUPR) Kabupaten Ngada merupakan unsur pelaksana urusan pemerintahan daerah yang mempunyai tugas pokok membantu Bupati dalam melaksanakan penyusunan dan pelaksanaan kebijakan daerah yang bersifat teknis di bidang pekerjaan umum dan penataan ruang, termasuk di dalamnya pengelolaan efisiensi tata ruang administrasi pertanahan daerah.</p>
+                </div>
+                <div class="profil-visi-misi">
+                    <div class="box-visi">
+                        <h4>Visi Kantor</h4>
+                        <p>"Terwujudnya infrastruktur daerah Kabupaten Ngada yang andal, terintegrasi, merata, dan berkepastian hukum."</p>
+                    </div>
+                    <div class="box-misi">
+                        <h4>Misi Pelayanan</h4>
+                        <ul>
+                            <li>Menyelenggarakan tata kelola administrasi pertanahan pemerintah daerah secara transparan.</li>
+                            <li>Mengamankan legalitas fisik dan yuridis aset tanah daerah demi meminimalkan sengketa lahan.</li>
+                            <li>Meningkatkan kualitas pelayanan publik pertanahan berbasis keterbukaan informasi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORGANIZATION CHART SECTION -->
+    <section class="chart-section">
+        <div class="container">
+            <div class="section-title-center">
+                <h3>Bagan Struktur Organisasi</h3>
+                <p>Susunan kepemimpinan struktural Bidang Pertanahan pada Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Ngada.</p>
+            </div>
+
+            <!-- BAGAN STRUKTUR ORGANISASI UPDATE HIERARKI SUB-BAWAHAN -->
+            <div class="org-chart-wrapper">
+                
+                <!-- BARIS PERTAMA: Kepala Dinas -->
+                <div class="org-row row-level-1">
+                    <div class="org-card leader-card">
+                        <h5>Kepala Dinas PUPR</h5>
+                        <p class="org-name">Kristoforus Wogo, S.T., M.T.</p>
+                        <p class="org-nip">NIP. 19741212 200003 1 005</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KEDUA: Sekretaris Dinas & Sub Bagian di Bawahnya -->
+                <div class="org-row row-level-2">
+                    <div class="org-group-box group-secretariat">
+                        <!-- Atasan Langsung -->
+                        <div class="org-card sub-leader-card">
+                            <h5>Sekretaris Dinas</h5>
+                            <p class="org-name">Yohanes Lado, S.Sos.</p>
+                            <p class="org-nip">NIP. 19780514 200604 1 012</p>
+                        </div>
+                        <!-- Garis Hubung Internal -->
+                        <div class="org-line-internal"></div>
+                        <!-- Sub Bagian yang Dibawahi -->
+                        <div class="org-sub-items">
+                            <div class="org-card sub-staff-card">
+                                <h5>Sub Bagian Umum & Kepegawaian</h5>
+                                <p class="org-name">Siprianus Bhoki, S.ST.</p>
+                            </div>
+                            <div class="org-card sub-staff-card">
+                                <h5>Sub Bagian Keuangan</h5>
+                                <p class="org-name">Yuliana Ngadha, S.E.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KETIGA: Para Kepala Bidang -->
+                <div class="org-row row-level-3">
+                    <div class="org-card field-card">
+                        <h5>Kabid Bina Marga</h5>
+                        <p class="org-name">Anicetus Djawa, S.T.</p>
+                    </div>
+                    
+                    <div class="org-card field-card highlight-card">
+                        <h5>Kabid Pertanahan</h5>
+                        <p class="org-name">Emanuel Goa, S.H.</p>
+                        <p class="org-nip">NIP. 19810923 200901 1 003</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Perumahan</h5>
+                        <p class="org-name">Maria Goreti Nuwa, S.H.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Cipta Karya</h5>
+                        <p class="org-name">Fransiskus Dhosa, A.Md.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Penataan Ruang & Jasa Konstruksi</h5>
+                        <p class="org-name">Aloysius Dari, S.T.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Sumber Daya Air</h5>
+                        <p class="org-name">Petrus Rabu, S.T.</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KEEMPAT: Kepala UPTD & Sub-Bawahan -->
+                <div class="org-row row-level-4">
+                    <div class="org-group-box group-uptd">
+                        <!-- Atasan Langsung -->
+                        <div class="org-card uptd-card">
+                            <h5>Kepala UPTD Peralatan & Perbekalan</h5>
+                            <p class="org-name">Stefanus Bhebo, S.E.</p>
+                        </div>
+                        <!-- Garis Hubung Internal -->
+                        <div class="org-line-internal"></div>
+                        <!-- Sub Bagian yang Dibawahi -->
+                        <div class="org-sub-items">
+                            <div class="org-card sub-staff-card">
+                                <h5>Kepala Bagian Tata Usaha</h5>
+                                <p class="org-name">Yohanes Gae, A.Md.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BAGAN STRUKTUR ORGANISASI UPDATE 4 BARIS --
+            <div class="org-chart-wrapper">
+                
+                <!-- BARIS PERTAMA: Kepala Dinas --
+                <div class="org-row row-level-1">
+                    <div class="org-card leader-card">
+                        <h5>Kepala Dinas PUPR</h5>
+                        <p class="org-name">Kristoforus Wogo, S.T., M.T.</p>
+                        <p class="org-nip">NIP. 19741212 200003 1 005</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KEDUA: Sekretaris Dinas & Sub Bagian --
+                <div class="org-row row-level-2">
+                    <div class="org-card sub-leader-card">
+                        <h5>Sekretaris Dinas</h5>
+                        <p class="org-name">Yohanes Lado, S.Sos.</p>
+                        <p class="org-nip">NIP. 19780514 200604 1 012</p>
+                    </div>
+                    <div class="org-card sub-staff-card">
+                        <h5>Sub Bagian Umum & Kepegawaian</h5>
+                        <p class="org-name">Siprianus Bhoki, S.ST.</p>
+                    </div>
+                    <div class="org-card sub-staff-card">
+                        <h5>Sub Bagian Keuangan</h5>
+                        <p class="org-name">Yuliana Ngadha, S.E.</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KETIGA: Para Kepala Bidang (Highlight pada Pertanahan) --
+                <div class="org-row row-level-3">
+                    <div class="org-card field-card">
+                        <h5>Kabid Bina Marga</h5>
+                        <p class="org-name">Anicetus Djawa, S.T.</p>
+                    </div>
+                    
+                    <div class="org-card field-card highlight-card">
+                        <h5>Kabid Pertanahan</h5>
+                        <p class="org-name">Emanuel Goa, S.H.</p>
+                        <p class="org-nip">NIP. 19810923 200901 1 003</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Perumahan</h5>
+                        <p class="org-name">Maria Goreti Nuwa, S.H.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Cipta Karya</h5>
+                        <p class="org-name">Fransiskus Dhosa, A.Md.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Penataan Ruang & Jasa Konstruksi</h5>
+                        <p class="org-name">Aloysius Dari, S.T.</p>
+                    </div>
+
+                    <div class="org-card field-card">
+                        <h5>Kabid Sumber Daya Air</h5>
+                        <p class="org-name">Petrus Rabu, S.T.</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- BARIS KEEMPAT: Kepala UPTD --
+                <div class="org-row row-level-4">
+                    <div class="org-card uptd-card">
+                        <h5>Kepala UPTD Peralatan & Perbekalan</h5>
+                        <p class="org-name">Stefanus Bhebo, S.E.</p>
+                    </div>
+                </div>
+
+            </div-->
+
+            <!-- BAGAN BERBASIS CSS GRID/FLEX --
+            <div class="org-chart-wrapper">
+                
+                <!-- Level 1: Kepala Dinas --
+                <div class="org-row row-top">
+                    <div class="org-card leader-card">
+                        <h5>Kepala Dinas PUPR</h5>
+                        <p class="org-name">Kristoforus Wogo, S.T., M.T.</p>
+                        <p class="org-nip">NIP. 19741212 200003 1 005</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- Level 2: Sekretaris & Bidang Utama --
+                <div class="org-row row-mid">
+                    <div class="org-card sub-leader-card">
+                        <h5>Sekretaris Dinas</h5>
+                        <p class="org-name">Yohanes Lado, S.Sos.</p>
+                        <p class="org-nip">NIP. 19780514 200604 1 012</p>
+                    </div>
+
+                    <div class="org-card highlight-card">
+                        <h5>Kepala Bidang Pertanahan</h5>
+                        <p class="org-name">Emanuel Goa, S.H.</p>
+                        <p class="org-nip">NIP. 19810923 200901 1 003</p>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical"></div>
+
+                <!-- Level 3: Seksi / Sub-Kelompok Sub-koordinator --
+                <div class="org-row row-bottom">
+                    <div class="org-card staff-card">
+                        <h5>Seksi Sengketa & Konflik Pertanahan</h5>
+                        <p class="org-name">Siprianus Bhoki, S.ST.</p>
+                    </div>
+                    
+                    <div class="org-card staff-card">
+                        <h5>Seksi Pengadaan & Pendaftaran Tanah</h5>
+                        <p class="org-name">Maria Goreti Nuwa, S.H.</p>
+                    </div>
+
+                    <div class="org-card staff-card">
+                        <h5>Seksi Penatagunaan & Pemanfaatan Tanah</h5>
+                        <p class="org-name">Fransiskus Dhosa, A.Md.</p>
+                    </div>
+                </div>
+
+            </div-->
+        </div>
+    </section>
+
+    <!-- HERO SECTION --
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-welcome">Selamat Datang di</p>
+                <h2 class="hero-title">SiTanah Ngada</h2>
+                <h3 class="hero-subtitle">Sistem Informasi Pertanahan Kabupaten Ngada</h3>
+                <p class="hero-desc">
+                    Media informasi digital mengenai proses Pendaftaran Tanah Pemerintah Daerah Kabupaten Ngada yang mudah, transparan, dan dapat diakses oleh perangkat daerah maupun masyarakat.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-blue">📄 PELAJARI ALUR PENDAFTARAN →</a>
+                    <a href="#" class="btn btn-yellow">📋 LIHAT PERSYARATAN</a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <!-- Wrapper untuk slider --
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <!-- Slide 1 (Gedung Baru) --
+                        <div class="slide" id="slide-1">
+                            <img src="pic/pu_depan.png" alt="Dinas PUPR Kabupaten Ngada Baru">
+                            <div class="building-tag">KONDISI SEKARANG<br>DINAS PUPR NGADA</div>
+                        </div>
+                        <!-- Slide 2 (Gedung Lama) --
+                        <div class="slide" id="slide-2">
+                            <img src="pic/pu_blakang.jpeg" alt="Dinas PUPR Kabupaten Ngada Lama">
+                            <div class="building-tag">KONDISI SEBELUMNYA<br>DINAS PUPR NGADA</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tombol Navigasi Manual Kiri & Kanan --
+                    <a href="#slide-2" class="slider-nav nav-prev">&#10094;</a>
+                    <a href="#slide-1" class="slider-nav nav-next">&#10095;</a>
+                </div>
+            </div>
+
+
+            <!--div class="hero-image-container">
+                <!-- Placeholder untuk gedung Dinas PUPR --
+                <div class="building-placeholder">
+                    <div class="building-tag">DINAS PUPR<br>KABUPATEN NGADA</div>
+                </div>
+            </div--
+        </div>
+    </section>
+
+    <!-- SERVICE INFO SECTION --
+    <section class="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>INFORMASI LAYANAN</h2>
+                <p>Temukan informasi lengkap mengenai pendaftaran tanah Pemerintah Daerah Kabupaten Ngada</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 --
+                <div class="card">
+                    <div class="card-icon icon-blue">📄</div>
+                    <h3>Persyaratan</h3>
+                    <p>Informasi lengkap mengenai dokumen dan persyaratan pendaftaran tanah.</p>
+                    <a href="#">Selengkapnya →</a>
+                </div>
+                <!-- Card 2 --
+                <div class="card">
+                    <div class="card-icon icon-green">🌿</div>
+                    <h3>Alur Pendaftaran</h3>
+                    <p>Tahapan proses pendaftaran tanah Pemerintah Daerah Kabupaten Ngada.</p>
+                    <a href="#">Selengkapnya →</a>
+                </div>
+                <!-- Card 3 --
+                <div class="card">
+                    <div class="card-icon icon-orange">⚖️</div>
+                    <h3>Dasar Hukum</h3>
+                    <p>Landasan hukum dan peraturan yang menjadi dasar pelayanan pertanahan.</p>
+                    <a href="#">Selengkapnya →</a>
+                </div>
+                <!-- Card 4 --
+                <div class="card">
+                    <div class="card-icon icon-purple">❓</div>
+                    <h3>FAQ</h3>
+                    <p>Pertanyaan yang sering diajukan seputar pendaftaran tanah Pemerintah Daerah.</p>
+                    <a href="#">Selengkapnya →</a>
+                </div>
+                <!-- Card 5 --
+                <div class="card">
+                    <div class="card-icon icon-lightblue">📞</div>
+                    <h3>Kontak</h3>
+                    <p>Informasi kontak dan lokasi Bidang Pertanahan Dinas PUPR Kabupaten Ngada.</p>
+                    <a href="#">Selengkapnya →</a>
+                </div>
+            </div>
+        </div>
+    </section-->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <!--div class="logo-placeholder">🟢</div-->
+                    <div class="logo-images">
+                        <!-- Logo Kabupaten Ngada -->
+                        <img src="logo/Ngada.png" alt="Logo Kabupaten Ngada" class="web-logo">
+                        <!-- Logo PUPR -->
+                        <img src="logo/LogoPU.jpg" alt="Logo PUPR" class="web-logo">
+                    </div>
+                    <!--div>
+                        <h1 class="logo-title">SiTanah Ngada</h1>
+                        <p class="logo-subtitle">Sistem Informasi Pertanahan Kabupaten Ngada</p>
+                    </div-->    
+                    <div>
+                        <h3 class="logo-title" style="color: white;">SiTanah Ngada</h3>
+                        <p class="logo-subtitle" style="color: #ccc;">Sistem Informasi Pertanahan Kabupaten Ngada</p>
+                    </div>
+                </div>
+                <p class="footer-desc">Media informasi digital untuk mendukung transparansi dan kemudahan layanan pertanahan Pemerintah Daerah.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Link Cepat</h4>
+                <ul>
+                    <li><a href="#">&gt; Beranda</a></li>
+                    <li><a href="#">&gt; Profil</a></li>
+                    <li><a href="#">&gt; Persyaratan</a></li>
+                    <li><a href="#">&gt; Alur Pendaftaran</a></li>
+                    <li><a href="#">&gt; Dasar Hukum</a></li>
+                    <li><a href="#">&gt; FAQ</a></li>
+                    <li><a href="#">&gt; Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Kontak Kami</h4>
+                <p>📍 Jalan Eltari No. 45, Bajawa<br>Kabupaten Ngada, NTT</p>
+                <p>📞 (0385) 210 1234</p>
+                <p>✉️ pertanahan@pupr.ngadakab.go.id</p>
+                <p>🕒 Senin - Jumat: 08.00 - 16.00 WITA</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <!--span>📘</span> <span>📸</span> <span>📺</span-->
+                    <!-- Facebook Icon -->
+                    <a href="#" aria-label="Facebook">
+                        <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"></path>
+                        </svg>
+                    </a>
+                    <!-- Instagram Icon -->
+                    <a href="#" aria-label="Instagram">
+                        <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.893 3.893 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.298c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+                        </svg>
+                    </a>
+                    <!-- YouTube Icon -->
+                    <a href="#" aria-label="YouTube">
+                        <!--svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05 1.55-.174 1.902-.223 2.084a2.01 2.01 0 0 1-1.415 1.42c-1.117.299-5.273.33-6.1l.034c-.815-.003-4.977-.033-6.1-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.882-.22-1.402l-.013-.104-.018-.233-.007-.104c-.065-.914-.073-1.77-.074-1.957v-.075c.001-.194.01-1.108.082-2.06l.004-.105.01-.104c.05-1.55.174-1.902.223-2.084a2.01 2.01 0 0 1 1.415-1.42c1.117-.299 5.273-.33 6.1-.33h.089zm-1.67 3.375v4.25l4.015-2.125-4.015-2.125z"/>
+                        </svg-->
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p>Scan untuk Akses Cepat</p>
+                <!--div class="qr-placeholder">QR Code</div-->
+                <div id="qrcode" class="qr-real-box"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 (Ai) mJ Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 2. PANGGIL FILE LIBRARY SCRIPT OFFLINE (Letakkan sebelum tag penutup body) -->
+    <script src="qrcode.min.js"></script>
+    <!-- 3. KODE INSTAN UNTUK MEMBUAT GAMBAR QR CODE -->
+    <script>
+        // Jalankan pembuatan QR code setelah halaman selesai dimuat browser
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Targetkan element dengan ID 'qrcode'
+            new QRCode(document.getElementById("qrcode"), {
+                text: "index.html", // Isikan link website atau nama file lokal utama Anda di sini
+                width: 90,          // Lebar gambar QR Code (dalam pixel)
+                height: 90,         // Tinggi gambar QR Code (dalam pixel)
+                colorDark : "#0c2461", // Warna kotak QR (disesuaikan dengan warna biru khas Ngada)
+                colorLight : "#ffffff", // Warna latar belakang QR
+                correctLevel : QRCode.CorrectLevel.H // Tingkat akurasi scan tinggi
+            });
+        });
+    </script>
+
+</body>
+</html>
